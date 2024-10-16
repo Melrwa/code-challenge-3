@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
             event.stopPropagation(); // Prevent the click event from bubbling up
             deleteFilm(film.id, li);
           });
+         
   
           li.appendChild(span); // Append the movie title
           li.appendChild(deleteButton); // Append the delete button
