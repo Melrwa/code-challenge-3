@@ -1,0 +1,164 @@
+
+body {
+  background-color: #021529;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Heading Section */
+.heading {
+  background-color: #333333;
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  color: black;
+  font-weight: bold;
+  font-size: 1.8em;
+}
+
+#subtitle {
+  color: white;
+  font-size: 1.2em;
+  margin-left: 20px;
+}
+
+/* Content Colors */
+.content {
+  color: #3e8fde;
+}
+
+/* Movie Runtime */
+#runtime {
+  background-color: #333333;
+  color: #3e8fde;
+  padding: 5px;
+  font-size: 1.1em;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Showing Section */
+#showing {
+  margin-left: 20px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Movie List */
+#films li::before {
+  content: "";
+}
+
+.film.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  font-weight: bold;
+  font-size: 1.1em;
+  background-color: white;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  position: relative; /* For positioning the delete button */
+}
+
+.film.item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Sold Out Films */
+.sold-out {
+  color: lightgrey;
+}
+
+.film-title {
+  flex-grow: 1;
+  font-size: 1.1em;
+  color: #333333;
+  white-space: nowrap;  /* Prevents the movie title from breaking into a new line */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adds ... if the title is too long */
+  padding-right: 20px;
+}
+
+/* Poster Image */
+img {
+  max-width: 25vw;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Film Info */
+#film-info {
+  padding-bottom: 15px;
+  color: #333333;
+  font-size: 1.1em;
+}
+
+/* Ticket Numbers */
+#ticket-num {
+  color: black;
+  font-weight: bold;
+}
+
+/* Delete Button Styling and Positioning */
+.delete-button {
+  background-color: red;
+  border: 2px solid black;
+  color: white;
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-left: auto;
+  position: absolute; /* Absolute positioning */
+  right: 0; /* Aligns the button to the far right of the list item */
+  top: 50%; /* Vertical centering */
+  transform: translateY(-50%); /* Adjust to center vertically */
+  width: 100px; /* Fixed width for consistency */
+  text-align: center; /* Centers the text within the button */
+}
+/* Hover effect for Delete Button */
+.delete-button:hover {
+  background-color: darkred;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Adjusts the movie image style */
+img {
+  max-width: 25vw;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 20px; /* Adds spacing between the image and the film details */
+}
+
+
+/* Transitions for Hover Effects */
+a, button {
+  transition: all 0.3s ease-in-out;
+}
+/* Active state for clicked movie */
+.film.active {
+  background-color: #3e8fde; /* Highlight the selected film item */
+}
+
+.film-title.active {
+  color: white; /* Change the text color of the active film title */
+}
+
+/* Hover state to add a slight shadow effect */
+.film.item:hover {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
